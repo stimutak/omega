@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Omega Fabric - Business Consulting Website
 
-## Getting Started
+A modern, responsive website for Omega Fabric, a business consulting firm specializing in executive coaching, professional mentoring, and strategic consulting.
 
-First, run the development server:
+## 🚀 Features
+
+- **Responsive Design**: Fully responsive across all devices
+- **Modern UI**: Built with Next.js 15 and Tailwind CSS
+- **Professional Theme**: Purple-to-blue gradient design system
+- **Core Pages**: Home, About, Services, Contact
+- **Performance Optimized**: Static generation for fast loading
+- **SEO Ready**: Metadata configured for search engines
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.5.3
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Icons**: Lucide React
+- **Deployment**: Vercel-ready
+
+## 📦 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/omega.git
+
+# Navigate to project directory
+cd omega
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+omega/
+├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Root layout with Header/Footer
+│   ├── page.tsx           # Homepage
+│   ├── about/page.tsx     # About page
+│   ├── services/page.tsx  # Services overview
+│   └── contact/page.tsx   # Contact page
+├── components/
+│   └── layout/
+│       ├── Header.tsx     # Navigation header
+│       └── Footer.tsx     # Site footer
+├── lib/
+│   └── utils/
+│       └── cn.ts          # Utility functions
+└── public/                # Static assets
+```
 
-## Learn More
+## 🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+### Deploy to Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/omega)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Click the button above
+2. Connect your GitHub account
+3. Configure environment variables (if needed)
+4. Deploy!
 
-## Deploy on Vercel
+### Manual Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Build for production
+npm run build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Start production server
+npm start
+```
+
+## 📝 Environment Variables
+
+Copy `.env.example` to `.env.local` for local development:
+
+```bash
+cp .env.example .env.local
+```
+
+## 🎨 Customization
+
+### Colors
+The site uses a purple-to-blue gradient theme. To customize colors, edit the Tailwind classes throughout the components.
+
+### Content
+All content is directly in the component files. Edit the respective page components to update content.
+
+## 📄 License
+
+This project is private and proprietary to Omega Fabric.
+
+## 🤝 Contributing
+
+This is a private repository. For any questions or issues, please contact the development team.
+
+## 📧 Contact
+
+For inquiries about the website or services:
+- Email: contact@omegafabric.com
+- Phone: +1 (555) 123-4567
+- Address: 123 Business Ave, Suite 100, San Francisco, CA 94105
+
+---
+
+Built with ❤️ by Omega Fabric Development Team
