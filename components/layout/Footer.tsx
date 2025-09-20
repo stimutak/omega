@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Linkedin, Twitter, Github, Mail, Phone, MapPin } from 'lucide-react'
 
 const navigation = {
@@ -25,14 +26,18 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-[#2C3E50] text-gray-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-12">
           <div className="col-span-1">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Omega Fabric
-              </span>
+              <Image
+                src="/omega-logo.svg"
+                alt="Omega Fabric"
+                width={160}
+                height={48}
+                className="h-10 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="mt-4 text-sm">
               Weaving excellence through innovative solutions and transformative guidance.
@@ -44,7 +49,7 @@ export default function Footer() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="hover:text-purple-400 transition-colors"
+                    className="hover:text-white transition-colors"
                     aria-label={item.name}
                   >
                     <Icon className="h-5 w-5" />
@@ -61,7 +66,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm hover:text-purple-400 transition-colors"
+                    className="text-sm hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -77,7 +82,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm hover:text-purple-400 transition-colors"
+                    className="text-sm hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -105,16 +110,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 py-8">
+        <div className="border-t border-gray-600 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm">
               © {new Date().getFullYear()} Omega Fabric. All rights reserved.
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-sm hover:text-purple-400 transition-colors">
+              <Link href="/privacy" className="text-sm hover:text-white transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm hover:text-purple-400 transition-colors">
+              <Link href="/terms" className="text-sm hover:text-white transition-colors">
                 Terms of Service
               </Link>
             </div>

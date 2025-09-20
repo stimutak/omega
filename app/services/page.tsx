@@ -60,7 +60,7 @@ export default function ServicesPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
@@ -80,10 +80,10 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {services.map((service) => {
               const Icon = service.icon
-              const bgColor = service.color === 'purple' ? 'bg-purple-50' : 'bg-blue-50'
-              const iconBg = service.color === 'purple' ? 'bg-purple-100' : 'bg-blue-100'
-              const iconColor = service.color === 'purple' ? 'text-purple-600' : 'text-blue-600'
-              const linkColor = service.color === 'purple' ? 'text-purple-600 hover:text-purple-700' : 'text-blue-600 hover:text-blue-700'
+              const bgColor = 'bg-gray-50'
+              const iconBg = service.color === 'purple' ? 'bg-slate-100' : 'bg-gray-100'
+              const iconColor = 'text-[#2C3E50]'
+              const linkColor = 'text-[#2C3E50] hover:text-[#34495e]'
 
               return (
                 <div key={service.name} className={`rounded-2xl ${bgColor} p-8`}>
@@ -136,7 +136,7 @@ export default function ServicesPage() {
 
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div className="relative">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#2C3E50] text-white font-bold">
                 1
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-900">Discovery</h3>
@@ -146,7 +146,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="relative">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#2C3E50] text-white font-bold">
                 2
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-900">Strategy</h3>
@@ -156,7 +156,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="relative">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#2C3E50] text-white font-bold">
                 3
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-900">Implementation</h3>
@@ -166,7 +166,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="relative">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#2C3E50] text-white font-bold">
                 4
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-900">Optimization</h3>
@@ -181,17 +181,17 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-16 text-center shadow-2xl sm:px-16">
+          <div className="rounded-3xl bg-[#2C3E50] px-8 py-16 text-center shadow-2xl sm:px-16">
             <h2 className="text-3xl font-bold text-white sm:text-4xl">
               Ready to Transform Your Future?
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-purple-100">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-200">
               Take the first step toward extraordinary results. Schedule a consultation to explore how we can help you achieve your goals.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="rounded-lg bg-white px-8 py-3 text-sm font-semibold text-purple-600 shadow-sm hover:bg-gray-100 transition-colors"
+                className="rounded-lg bg-white px-8 py-3 text-sm font-semibold text-[#2C3E50] shadow-sm hover:bg-gray-50 transition-colors"
               >
                 Schedule Consultation
               </Link>

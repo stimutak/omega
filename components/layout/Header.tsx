@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
@@ -28,14 +29,19 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white shadow-sm">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Global">
         <div className="flex h-16 items-center justify-between">
           <div className="flex lg:flex-1">
-            <Link href="/" className="-m-1.5 p-1.5">
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                Omega Fabric
-              </span>
+            <Link href="/" className="-m-1.5 p-1.5 flex items-center">
+              <Image
+                src="/omega-logo.svg"
+                alt="Omega Fabric"
+                width={180}
+                height={54}
+                className="h-12 w-auto"
+                priority
+              />
             </Link>
           </div>
 
@@ -60,7 +66,7 @@ export default function Header() {
                 {item.children ? (
                   <div>
                     <button
-                      className="flex items-center gap-1 text-sm font-semibold leading-6 text-gray-900 hover:text-purple-600 transition-colors"
+                      className="flex items-center gap-1 text-sm font-semibold leading-6 text-gray-700 hover:text-[#2C3E50] transition-colors"
                       onClick={() => setOpenDropdown(openDropdown === item.name ? null : item.name)}
                     >
                       {item.name}
@@ -73,7 +79,7 @@ export default function Header() {
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#2C3E50]"
                               onClick={() => setOpenDropdown(null)}
                             >
                               {child.name}
@@ -86,7 +92,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-sm font-semibold leading-6 text-gray-900 hover:text-purple-600 transition-colors"
+                    className="text-sm font-semibold leading-6 text-gray-700 hover:text-[#2C3E50] transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -98,7 +104,7 @@ export default function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               href="/get-started"
-              className="text-sm font-semibold leading-6 text-white bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+              className="text-sm font-semibold leading-6 text-white bg-[#2C3E50] px-5 py-2.5 rounded-lg hover:bg-[#34495e] transition-all hover:shadow-md"
             >
               Get Started
             </Link>
@@ -135,7 +141,7 @@ export default function Header() {
               ))}
               <Link
                 href="/get-started"
-                className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white bg-gradient-to-r from-purple-600 to-blue-600"
+                className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white bg-[#2C3E50] hover:bg-[#34495e]"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get Started

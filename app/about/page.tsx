@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
@@ -32,15 +32,15 @@ export default function AboutPage() {
               </p>
               <div className="mt-8 space-y-4">
                 <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-[#2C3E50] flex-shrink-0" />
                   <span className="text-gray-700">Deliver measurable, lasting impact</span>
                 </div>
                 <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-[#2C3E50] flex-shrink-0" />
                   <span className="text-gray-700">Foster authentic leadership development</span>
                 </div>
                 <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-purple-600 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-[#2C3E50] flex-shrink-0" />
                   <span className="text-gray-700">Build resilient, adaptive organizations</span>
                 </div>
               </div>
@@ -55,15 +55,15 @@ export default function AboutPage() {
               </p>
               <div className="mt-8 space-y-4">
                 <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-[#2C3E50] flex-shrink-0" />
                   <span className="text-gray-700">Shape the future of leadership</span>
                 </div>
                 <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-[#2C3E50] flex-shrink-0" />
                   <span className="text-gray-700">Drive innovation across industries</span>
                 </div>
                 <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-[#2C3E50] flex-shrink-0" />
                   <span className="text-gray-700">Create lasting positive change</span>
                 </div>
               </div>
@@ -86,8 +86,8 @@ export default function AboutPage() {
 
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div className="text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
-                <Users className="h-8 w-8 text-purple-600" />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-slate-100">
+                <Users className="h-8 w-8 text-[#2C3E50]" />
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-900">Integrity</h3>
               <p className="mt-2 text-sm text-gray-600">
@@ -96,8 +96,8 @@ export default function AboutPage() {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
-                <Target className="h-8 w-8 text-blue-600" />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+                <Target className="h-8 w-8 text-[#2C3E50]" />
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-900">Excellence</h3>
               <p className="mt-2 text-sm text-gray-600">
@@ -106,8 +106,8 @@ export default function AboutPage() {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
-                <Globe className="h-8 w-8 text-purple-600" />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-slate-100">
+                <Globe className="h-8 w-8 text-[#2C3E50]" />
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-900">Innovation</h3>
               <p className="mt-2 text-sm text-gray-600">
@@ -116,8 +116,8 @@ export default function AboutPage() {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
-                <Award className="h-8 w-8 text-blue-600" />
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+                <Award className="h-8 w-8 text-[#2C3E50]" />
               </div>
               <h3 className="mt-4 text-lg font-semibold text-gray-900">Impact</h3>
               <p className="mt-2 text-sm text-gray-600">
@@ -142,9 +142,9 @@ export default function AboutPage() {
 
           <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-3">
             <div className="text-center">
-              <div className="mx-auto h-48 w-48 rounded-full bg-gradient-to-br from-purple-400 to-blue-400" />
+              <div className="mx-auto h-48 w-48 rounded-full bg-[#2C3E50]" />
               <h3 className="mt-6 text-lg font-semibold text-gray-900">Dr. Alexandra Chen</h3>
-              <p className="text-sm text-purple-600">Founder & CEO</p>
+              <p className="text-sm text-[#2C3E50]">Founder & CEO</p>
               <p className="mt-3 text-sm text-gray-600">
                 With over 25 years of experience in executive coaching and organizational development,
                 Dr. Chen has guided Fortune 500 CEOs through transformative leadership journeys.
@@ -154,7 +154,7 @@ export default function AboutPage() {
             <div className="text-center">
               <div className="mx-auto h-48 w-48 rounded-full bg-gradient-to-br from-blue-400 to-purple-400" />
               <h3 className="mt-6 text-lg font-semibold text-gray-900">Marcus Williams</h3>
-              <p className="text-sm text-purple-600">Chief Strategy Officer</p>
+              <p className="text-sm text-[#2C3E50]">Chief Strategy Officer</p>
               <p className="mt-3 text-sm text-gray-600">
                 A renowned strategic consultant with expertise in digital transformation and
                 innovation, Marcus has led successful business transformations across industries.
@@ -162,9 +162,9 @@ export default function AboutPage() {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto h-48 w-48 rounded-full bg-gradient-to-br from-purple-400 to-blue-400" />
+              <div className="mx-auto h-48 w-48 rounded-full bg-[#2C3E50]" />
               <h3 className="mt-6 text-lg font-semibold text-gray-900">Sarah Martinez</h3>
-              <p className="text-sm text-purple-600">VP of Coaching Excellence</p>
+              <p className="text-sm text-[#2C3E50]">VP of Coaching Excellence</p>
               <p className="mt-3 text-sm text-gray-600">
                 Certified in multiple coaching methodologies, Sarah specializes in developing
                 high-performance teams and fostering organizational culture transformation.
@@ -175,18 +175,18 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
+      <section className="py-20 bg-[#2C3E50]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
             Ready to Start Your Transformation Journey?
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-purple-100">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-200">
             Let&apos;s explore how Omega Fabric can help you achieve extraordinary results.
           </p>
           <div className="mt-8">
             <Link
               href="/contact"
-              className="inline-block rounded-lg bg-white px-8 py-3 text-sm font-semibold text-purple-600 shadow-sm hover:bg-gray-100 transition-colors"
+              className="inline-block rounded-lg bg-white px-8 py-3 text-sm font-semibold text-[#2C3E50] shadow-sm hover:bg-gray-50 transition-colors"
             >
               Get in Touch
             </Link>

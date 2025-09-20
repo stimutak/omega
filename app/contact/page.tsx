@@ -37,7 +37,7 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <section className="relative py-20 bg-gradient-to-br from-gray-50 via-white to-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -64,8 +64,8 @@ export default function ContactPage() {
 
               <div className="mt-8 space-y-6">
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">
-                    <Mail className="h-6 w-6 text-purple-600" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100">
+                    <Mail className="h-6 w-6 text-[#2C3E50]" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
@@ -75,8 +75,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
-                    <Phone className="h-6 w-6 text-blue-600" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-100">
+                    <Phone className="h-6 w-6 text-[#2C3E50]" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone</h3>
@@ -86,8 +86,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">
-                    <MapPin className="h-6 w-6 text-purple-600" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100">
+                    <MapPin className="h-6 w-6 text-[#2C3E50]" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Office</h3>
@@ -97,8 +97,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
-                    <Clock className="h-6 w-6 text-blue-600" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-100">
+                    <Clock className="h-6 w-6 text-[#2C3E50]" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Business Hours</h3>
@@ -138,7 +138,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-purple-500 focus:ring-purple-500"
+                      className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#2C3E50] focus:ring-[#2C3E50]"
                     />
                   </div>
 
@@ -153,7 +153,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-purple-500 focus:ring-purple-500"
+                      className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#2C3E50] focus:ring-[#2C3E50]"
                     />
                   </div>
 
@@ -167,7 +167,7 @@ export default function ContactPage() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-purple-500 focus:ring-purple-500"
+                      className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#2C3E50] focus:ring-[#2C3E50]"
                     />
                   </div>
 
@@ -181,7 +181,7 @@ export default function ContactPage() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-purple-500 focus:ring-purple-500"
+                      className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#2C3E50] focus:ring-[#2C3E50]"
                     >
                       <option value="">Select a subject</option>
                       <option value="executive-coaching">Executive Coaching</option>
@@ -204,14 +204,14 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-purple-500 focus:ring-purple-500"
+                      className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#2C3E50] focus:ring-[#2C3E50]"
                       placeholder="Tell us about your needs and how we can help..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-90 transition-opacity"
+                    className="w-full flex items-center justify-center gap-2 rounded-lg bg-[#2C3E50] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#34495e] transition-colors"
                   >
                     <Send className="h-4 w-4" />
                     Send Message
@@ -226,9 +226,9 @@ export default function ContactPage() {
       {/* Map Section (Placeholder) */}
       <section className="py-20 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-gradient-to-br from-purple-100 to-blue-100 h-96 flex items-center justify-center">
+          <div className="rounded-2xl bg-gradient-to-br from-slate-100 to-gray-100 h-96 flex items-center justify-center">
             <div className="text-center">
-              <MapPin className="mx-auto h-12 w-12 text-purple-600" />
+              <MapPin className="mx-auto h-12 w-12 text-[#2C3E50]" />
               <p className="mt-4 text-lg font-semibold text-gray-900">San Francisco, California</p>
               <p className="text-gray-600">123 Business Ave, Suite 100</p>
             </div>
