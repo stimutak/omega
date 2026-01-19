@@ -1,235 +1,185 @@
-import Link from 'next/link'
-import { ArrowRight, Target, Users, Lightbulb, TrendingUp, Award } from 'lucide-react'
+'use client'
 
-export default function Home() {
+import { motion } from 'framer-motion'
+
+export default function MaintenancePage() {
   return (
-    <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-50 via-white to-slate-50 py-20 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
-              Transform Your
-              <span className="block text-[#2C3E50]">
-                Business Potential
-              </span>
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-              Omega Fabric weaves together executive coaching, strategic consulting, and transformative
-              mentoring to help leaders and organizations reach unprecedented heights of success.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link
-                href="/get-started"
-                className="rounded-lg bg-[#2C3E50] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#34495e] transition-colors"
-              >
-                Start Your Journey
-              </Link>
-              <Link
-                href="/services"
-                className="text-sm font-semibold leading-6 text-gray-900 hover:text-[#2C3E50] transition-colors flex items-center gap-1"
-              >
-                Explore Services <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-          <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-slate-200 to-gray-200 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" />
-        </div>
-      </section>
+    <div className="relative min-h-screen bg-[#0a0a0f] overflow-hidden flex items-center justify-center">
+      {/* Animated background gradient orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-purple-900/20 to-blue-900/20 blur-3xl"
+          animate={{
+            x: [0, 100, 0],
+            y: [0, -50, 0],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-indigo-900/20 to-slate-900/20 blur-3xl"
+          animate={{
+            x: [0, -80, 0],
+            y: [0, 60, 0],
+            scale: [1.2, 1, 1.2],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-slate-900/30 to-zinc-900/30 blur-3xl"
+          animate={{
+            scale: [1, 1.1, 1],
+            rotate: [0, 180, 360],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      </div>
 
-      {/* Services Overview */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Comprehensive Solutions for Every Challenge
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Our integrated approach combines expertise across multiple disciplines to deliver lasting transformation.
-            </p>
-          </div>
+      {/* Animated mesh/fabric lines */}
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute h-px bg-gradient-to-r from-transparent via-white/50 to-transparent"
+            style={{
+              top: `${12 + i * 12}%`,
+              left: '-10%',
+              right: '-10%',
+            }}
+            animate={{
+              x: ['-100%', '100%'],
+              opacity: [0, 0.5, 0],
+            }}
+            transition={{
+              duration: 8 + i * 0.5,
+              repeat: Infinity,
+              ease: "linear",
+              delay: i * 0.8,
+            }}
+          />
+        ))}
+      </div>
 
-          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="group relative rounded-2xl border border-gray-200 p-8 hover:border-[#2C3E50] hover:shadow-lg transition-all">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 group-hover:bg-slate-200 transition-colors">
-                <Target className="h-6 w-6 text-[#2C3E50]" />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">Executive Coaching</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Personalized leadership development to unlock your full potential and drive organizational success.
-              </p>
-              <Link
-                href="/services/executive-coaching"
-                className="mt-4 inline-flex items-center text-sm font-semibold text-[#2C3E50] hover:text-[#34495e]"
-              >
-                Learn more <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
-            </div>
+      {/* Floating particles */}
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-white/30 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -100, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 5 + Math.random() * 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: Math.random() * 5,
+            }}
+          />
+        ))}
+      </div>
 
-            <div className="group relative rounded-2xl border border-gray-200 p-8 hover:border-[#2C3E50] hover:shadow-lg transition-all">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-100 group-hover:bg-gray-200 transition-colors">
-                <Users className="h-6 w-6 text-[#2C3E50]" />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">Professional Mentoring</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Expert guidance to navigate career transitions and accelerate professional growth.
-              </p>
-              <Link
-                href="/services/professional-mentoring"
-                className="mt-4 inline-flex items-center text-sm font-semibold text-[#2C3E50] hover:text-[#34495e]"
-              >
-                Learn more <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
-            </div>
+      {/* Main content */}
+      <div className="relative z-10 text-center px-4">
+        {/* Omega symbol animation */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="mb-8"
+        >
+          <motion.span
+            className="text-8xl sm:text-9xl font-thin text-white/10 block"
+            animate={{
+              textShadow: [
+                '0 0 20px rgba(255,255,255,0.1)',
+                '0 0 40px rgba(255,255,255,0.2)',
+                '0 0 20px rgba(255,255,255,0.1)',
+              ],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            Ω
+          </motion.span>
+        </motion.div>
 
-            <div className="group relative rounded-2xl border border-gray-200 p-8 hover:border-purple-400 transition-colors">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 group-hover:bg-slate-200 transition-colors">
-                <Lightbulb className="h-6 w-6 text-[#2C3E50]" />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">Personal Consultancy</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Tailored strategies for personal excellence and work-life integration.
-              </p>
-              <Link
-                href="/services/personal-consultancy"
-                className="mt-4 inline-flex items-center text-sm font-semibold text-[#2C3E50] hover:text-[#34495e]"
-              >
-                Learn more <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
-            </div>
+        {/* Company name */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+          className="text-5xl sm:text-7xl lg:text-8xl font-extralight tracking-[0.3em] text-white uppercase"
+        >
+          <span className="bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
+            Omega
+          </span>
+        </motion.h1>
 
-            <div className="group relative rounded-2xl border border-gray-200 p-8 hover:border-purple-400 transition-colors">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-100 group-hover:bg-gray-200 transition-colors">
-                <TrendingUp className="h-6 w-6 text-[#2C3E50]" />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">Strategic Consulting</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Data-driven insights and innovative strategies to transform your business.
-              </p>
-              <Link
-                href="/services/strategic-consulting"
-                className="mt-4 inline-flex items-center text-sm font-semibold text-[#2C3E50] hover:text-[#34495e]"
-              >
-                Learn more <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+          className="text-3xl sm:text-5xl lg:text-6xl font-extralight tracking-[0.5em] text-white/70 mt-2 uppercase"
+        >
+          Fabric
+        </motion.h2>
 
-      {/* Stats Section */}
-      <section className="bg-[#2C3E50] py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 text-center">
-            <div>
-              <p className="text-4xl font-bold text-white">500+</p>
-              <p className="mt-2 text-gray-200">Leaders Transformed</p>
-            </div>
-            <div>
-              <p className="text-4xl font-bold text-white">95%</p>
-              <p className="mt-2 text-gray-200">Client Satisfaction</p>
-            </div>
-            <div>
-              <p className="text-4xl font-bold text-white">20+</p>
-              <p className="mt-2 text-gray-200">Years of Excellence</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        {/* Subtle animated line */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
+          className="mt-12 mx-auto w-32 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"
+        />
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              What Our Clients Say
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Real stories of transformation and success from leaders we&apos;ve partnered with.
-            </p>
-          </div>
+        {/* Subtle pulsing dot */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="mt-16 flex justify-center"
+        >
+          <motion.div
+            className="w-2 h-2 rounded-full bg-white/50"
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.5, 1, 0.5],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </motion.div>
+      </div>
 
-          <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
-            <div className="rounded-2xl bg-white p-8 shadow-sm">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Award key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-600">
-                &quot;Omega Fabric&apos;s executive coaching transformed my leadership approach. The insights
-                and strategies I gained have been invaluable for both my personal growth and my company&apos;s success.&quot;
-              </p>
-              <div className="mt-6">
-                <p className="font-semibold text-gray-900">Sarah Johnson</p>
-                <p className="text-sm text-gray-600">CEO, Tech Innovations Inc.</p>
-              </div>
-            </div>
-
-            <div className="rounded-2xl bg-white p-8 shadow-sm">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Award key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-600">
-                &quot;The strategic consulting services helped us navigate a critical transformation.
-                Their expertise and guidance were instrumental in our successful market expansion.&quot;
-              </p>
-              <div className="mt-6">
-                <p className="font-semibold text-gray-900">Michael Chen</p>
-                <p className="text-sm text-gray-600">COO, Global Retail Solutions</p>
-              </div>
-            </div>
-
-            <div className="rounded-2xl bg-white p-8 shadow-sm">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Award key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-600">
-                &quot;The professional mentoring program exceeded my expectations. I gained clarity on my
-                career path and the confidence to pursue my ambitious goals.&quot;
-              </p>
-              <div className="mt-6">
-                <p className="font-semibold text-gray-900">Emily Rodriguez</p>
-                <p className="text-sm text-gray-600">VP of Marketing, Creative Agency</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-gradient-to-br from-gray-100 to-slate-100 px-8 py-16 text-center shadow-lg sm:px-16 border border-gray-200">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-              Ready to Transform Your Future?
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-700">
-              Join hundreds of successful leaders who have unlocked their potential with Omega Fabric.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="rounded-lg bg-[#2C3E50] px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#34495e] transition-colors"
-              >
-                Schedule a Consultation
-              </Link>
-              <Link
-                href="/workshops"
-                className="rounded-lg border-2 border-[#2C3E50] px-8 py-3 text-sm font-semibold text-[#2C3E50] hover:bg-[#2C3E50] hover:text-white transition-all"
-              >
-                View Upcoming Workshops
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Corner accents */}
+      <div className="absolute top-8 left-8 w-16 h-16 border-l border-t border-white/10" />
+      <div className="absolute top-8 right-8 w-16 h-16 border-r border-t border-white/10" />
+      <div className="absolute bottom-8 left-8 w-16 h-16 border-l border-b border-white/10" />
+      <div className="absolute bottom-8 right-8 w-16 h-16 border-r border-b border-white/10" />
     </div>
   )
 }
